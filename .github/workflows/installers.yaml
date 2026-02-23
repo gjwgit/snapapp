@@ -1,0 +1,30 @@
+name: Build Snap
+
+on: push
+
+env:
+  APP: snapapp
+  RELEASE: dev
+  LINUX_PKGS: libsecret-1-dev
+  FLUTTER_VERSION: "3.41.1"
+
+jobs:
+
+  package-linux-snap:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Clone Repository
+        uses: actions/checkout@v4
+
+      - name: Build snap
+        uses: canonical/action-build@v1
+        id: build
+
+      - name: Upload snap artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.APP }}-linux-snap
+          path: ${{ steps.build.outputs.snap }}
