@@ -5,7 +5,7 @@ on: push
 env:
   APP: snapapp
   RELEASE: dev
-  LINUX_PKGS: libsecret-1-dev
+  LINUX_PKGS: libsecret-1-dev libjsoncpp-dev
   FLUTTER_VERSION: "3.41.1"
 
 jobs:
