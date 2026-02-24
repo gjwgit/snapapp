@@ -30,20 +30,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  archive: ^4.0.8
-  crypto: ^3.0.7
-  encrypter_plus: ^5.1.0
-  fast_rsa: ^3.8.6
-  http: ^1.6.0
-  intl: ^0.20.2
-  jwt_decoder: ^2.0.1
-  mime: ^2.0.0
-  package_info_plus: ^9.0.0
-  path: ^1.9.1
-  pointycastle: ^4.0.0
-  rdflib: ^0.2.12
-  solid_auth: ^0.1.28
-  universal_io: ^2.3.1
+  flutter_secure_storage: ^10.0.0
 
 
   # The following adds the Cupertino Icons font to your application.
