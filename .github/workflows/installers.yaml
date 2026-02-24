@@ -26,6 +26,21 @@ jobs:
           sudo apt-get upgrade -y
           sudo apt-get install -y ${{env.LINUX_PKGS}}
 
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          architecture: x64
+          flutter-version: ${{env.FLUTTER_VERSION}}
+
+      - name: TEST Install Flutter Project Dependencies
+        run: |
+          flutter --version
+          flutter clean
+          flutter pub get
+          flutter config --enable-linux-desktop
+          flutter build linux --release
+
       - name: Build snap
         uses: canonical/action-build@v1
         id: build
