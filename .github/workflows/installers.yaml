@@ -21,7 +21,10 @@ jobs:
 
       - name: Install extra Linux packages
         if: env.LINUX_PKGS != ''
-        run: sudo apt-get install -y ${{env.LINUX_PKGS}}
+        run: |
+          sudo apt-get update -y
+          sudo apt-get upgrade -y
+          sudo apt-get install -y ${{env.LINUX_PKGS}}
 
       - name: Build snap
         uses: canonical/action-build@v1
