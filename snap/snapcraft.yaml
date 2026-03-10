@@ -31,6 +31,7 @@ parts:
     flutter-target: lib/main.dart
     build-packages:
       - clang
+      - llvm
       - cmake
       - git
       - ninja-build
@@ -42,6 +43,7 @@ parts:
       - libjsoncpp-dev
       - libssl-dev
       - lld
+      - binutils
     stage-packages:
       - libsecret-1-0
       - libjsoncpp-dev
