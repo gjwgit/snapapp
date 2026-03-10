@@ -9,7 +9,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  # flutter_secure_storage: ^9.2.4
+    # 20260310 gjw With flutter_secure_storage I have not been able to
+    # build a snap package using canonical github work flow
+
+  flutter_secure_storage: any
   cupertino_icons: ^1.0.8
 
 dev_dependencies:
