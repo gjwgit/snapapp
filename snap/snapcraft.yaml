@@ -4,7 +4,7 @@ summary: Test snap build with github workflow
 description: |
   Testing.
 
-base: core22
+base: core24
 grade: stable
 confinement: strict
 
