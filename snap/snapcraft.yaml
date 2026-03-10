@@ -20,6 +20,9 @@ apps:
       - opengl
       - network
       - home
+      - network-bind
+      - password-manager-service
+      - secret-service
 
 parts:
   snapapp:
@@ -35,6 +38,8 @@ parts:
       - liblzma-dev
       - libsecret-1-dev
       - libjsoncpp-dev
+      - libssl-dev
     stage-packages:
       - libsecret-1-0
       - libjsoncpp-dev
+      - libssl3
