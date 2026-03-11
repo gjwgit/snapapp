@@ -22,7 +22,6 @@ apps:
       - home
       - network-bind
       - password-manager-service
-      - secret-service
 
 parts:
   snapapp:
