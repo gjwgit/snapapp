@@ -42,7 +42,6 @@ parts:
       - lld
       - llvm
       - ninja-build
-      - pkg-config
     stage-packages:
       - libgtk-3-0
       - libjsoncpp-dev
